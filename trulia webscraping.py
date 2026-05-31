@@ -19,11 +19,18 @@ headers = {
 #Get requests
 r = requests.get(website,headers=headers)
 #Status Code
-print(r.status_code)
+r.status_code
 
 soup = BeautifulSoup(r.content,'html.parser')
 
+result_container = soup.find_all('li',class_ = 'fallback-bg homestay-card')
 
+#Concatenate 2 url parts to get absolute Url
+for item in result_container:
+    for link in item.find_all('a',href = True):
+        result_link.append(baseurl + link['href'])
+
+#Get Data from the first link
 
 
         
