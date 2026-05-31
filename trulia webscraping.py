@@ -4,13 +4,14 @@ from bs4 import BeautifulSoup
 import requests
 
 result_update = []
+result_link = []
 
 
 #baseurl
-baseurl = 'https://www.hostelworld.com/'
+baseurl = 'https://www.homestay.com/'
 
 #store website in variable
-website = 'https://www.hostelworld.com/pwa/s?q=San%20Diego,%20California,%20USA&country=California,%20USA&city=San%20Diego&type=city&id=129&from=2026-06-01&to=2026-06-04&guests=2&page=1'
+website = 'https://www.homestay.com/homestays/search?utf8=%E2%9C%93&search_type=search_box&latitude=&longitude=&country_code=&ne_lat=&ne_lng=&sw_lat=&sw_lng=&radius=&type=&order=&location_id=117&google_place_id=&price_filter_nights=&location=San+Diego%2C+California%2C+United+States&check_in=&check_out=&guests=1'
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
@@ -18,19 +19,16 @@ headers = {
 #Get requests
 r = requests.get(website,headers=headers)
 #Status Code
-r.status_code
+print(r.status_code)
 
 soup = BeautifulSoup(r.content,'html.parser')
 
-#Results
-result_container = soup.find_all('div',class_ = "property-card")
-#we just want to target the element which have the attribute
-for r in result_container:
-    if r.has_attr('data-v-64e39c4e'):
-        result_update.append(r)
-print(len(result_update))
 
-  
+
+
+        
+
+
 
 
     
