@@ -9,7 +9,7 @@ result_link = []
 
 #baseurl
 baseurl = 'https://www.homestay.com/'
-for x in range(1,100):
+for x in range(1,50):
     #store website in variable
     website = (f"https://www.homestay.com/homestays/search?utf8=%E2%9C%93&search_type=search_box&latitude=&longitude=&country_code=&ne_lat=&ne_lng=&sw_lat=&sw_lng=&radius=&type=&order=&location_id=291&google_place_id=&price_filter_nights=&location=Philadelphia%2C+Pennsylvania%2C+United+States&check_in=&check_out=&guests=1&page={x}")
 
@@ -29,7 +29,6 @@ for x in range(1,100):
     for item in result_container:
         for link in item.find_all('a',href = True):
             result_link.append(baseurl + link['href'])
-result_link = list(dict.fromkeys(result_link))
 print(len(result_link))
 #Get Data from the first link
 
@@ -59,5 +58,5 @@ for link in result_link:
     result_update.append(housing_data)
 
 df = pd.DataFrame(result_update)
-df.to_csv("Philadelphia.csv")
+df.to_csv("09_Philadelphia.csv")
 

@@ -29,7 +29,7 @@ for x in range(1,100):
     for item in result_container:
         for link in item.find_all('a',href = True):
             result_link.append(baseurl + link['href'])
-result_link = list(dict.fromkeys(result_link))
+
 print(len(result_link))
 #Get Data from the first link
 
@@ -59,5 +59,5 @@ for link in result_link:
     result_update.append(housing_data)
 
 df = pd.DataFrame(result_update)
-df.to_csv("New_York.csv")
+df.to_csv("01_New_York.csv")
 
