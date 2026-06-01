@@ -11,7 +11,7 @@ result_link = []
 baseurl = 'https://www.homestay.com/'
 for x in range(1,100):
     #store website in variable
-    website = (f"https://www.homestay.com/homestays/search?utf8=%E2%9C%93&search_type=search_box&latitude=&longitude=&country_code=&ne_lat=&ne_lng=&sw_lat=&sw_lng=&radius=&type=&order=&location_id=619&google_place_id=&price_filter_nights=&location=Washington+DC%2C+Washington%2C+D.C.%2C+United+States&check_in=&check_out=&guests=1&page={x}")
+    website = (f"https://www.homestay.com/homestays/search?utf8=%E2%9C%93&search_type=search_box&latitude=&longitude=&country_code=&ne_lat=&ne_lng=&sw_lat=&sw_lng=&radius=&type=&order=&location_id=259&google_place_id=&price_filter_nights=&location=Miami%2C+Florida%2C+United+States&check_in=&check_out=&guests=1&page={x}")
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
