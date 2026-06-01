@@ -42,7 +42,7 @@ for link in result_link:
     criteria = soup.find('div',class_ = "col-xs-6").text
     #About homestay
     about_homestay = soup.find('div',class_ = 'connect-tags pull-right-md spacer-half-sm')
-    about_homestay = about_homestay.text.strip() if about_homestay else "Suburban Cosy"
+    about_homestay = about_homestay.text.strip() if about_homestay else "NaN"
     #Availability
     available_for = soup.find('ul','list-unstyled tick-list list-inline').get_text(separator=" ")
     #House facilities
