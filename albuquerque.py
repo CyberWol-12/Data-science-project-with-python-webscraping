@@ -9,9 +9,9 @@ result_link = []
 
 #baseurl
 baseurl = 'https://www.homestay.com/'
-for x in range(1,56):
+for x in range(1,100):
     #store website in variable
-    website = (f'https://www.homestay.com/homestays/search?utf8=%E2%9C%93&search_type=search_box&latitude=&longitude=&country_code=&ne_lat=&ne_lng=&sw_lat=&sw_lng=&radius=&type=&order=&location_id=117&google_place_id=&price_filter_nights=&location=San+Diego%2C+California%2C+United+States&check_in=&check_out=&guests=1&page={x}')
+    website = (f"https://www.homestay.com/homestays/search?utf8=%E2%9C%93&search_type=search_box&latitude=&longitude=&country_code=&ne_lat=&ne_lng=&sw_lat=&sw_lng=&radius=&type=&order=&location_id=113842&google_place_id=&price_filter_nights=&location=Albuquerque%2C+New+Mexico%2C+United+States&check_in=&check_out=&guests=1&page={x}")
 
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
@@ -59,5 +59,5 @@ for link in result_link:
     result_update.append(housing_data)
 
 df = pd.DataFrame(result_update)
-df.to_csv("Housing.csv")
+df.to_csv("albuquerque.csv")
 
