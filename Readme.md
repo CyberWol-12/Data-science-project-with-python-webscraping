@@ -34,7 +34,7 @@ The homestay datasets were scraped from the following USA states/cities:
 
 #  Project Structure
 
-
+```
 USA_Diff_States_webscrape/
 
 ├── 01_New_York.csv
@@ -46,10 +46,11 @@ USA_Diff_States_webscrape/
 ├── 07_albuquerque.csv
 ├── 08_Indianapolis.csv
 ├── 09_Philadelphia.csv
-├── homestay.csv          # Centralized Cleaned Dataset
-├── homestay.ipynb        # Comprehensive Notebook (Scraping, EDA, & ETL)
+├── homestay.csv
+├── homestay.ipynb
 
 └── README.md
+```
 
 
 # Technologies Used
